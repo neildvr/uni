@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">RemindMe Beta</string>
+    <string name="search_title">Search</string>
+
+    <string name="menu_item_notification">Напоминания</string>
+
+    <string name="view_navigation_open">Open</string>
+    <string name="view_navigation_close">Close</string>
+
+    <string name="tab_item_ideas">spirit</string>
+    <string name="tab_item_history">news</string>
+    <string name="tab_item_todo">event</string>
+    <string name="tab_item_birthdays">dinner</string>
+    <string name="menutext">Здесь конечно может быть ваша реклама, но в Ж*пУ её! Если есть интересный материал про университет, то кидайте его на davydov_n@iuca.kg</string>
+
+</resources>
