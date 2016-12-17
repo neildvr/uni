@@ -15,6 +15,8 @@ import com.qoobico.remindme.fragment.IdeasFragment;
 
 import java.util.List;
 
+import static android.R.id.list;
+
 /**
  * Created by filipp on 9/16/2016.
  */
@@ -60,4 +62,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
             imageView = (ImageView) itemView.findViewById(R.id.image);
         }
     }
+
+
+
 }

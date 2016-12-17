@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -28,6 +29,8 @@ import okhttp3.Response;
 
 public class TodoFragment extends AbstractTabFragment {
     private static final int LAYOUT = R.layout.fragment_test;
+    private SwipeRefreshLayout swipeContainer;
+
 
     private RecyclerView recyclerView;
     private GridLayoutManager gridLayoutManager;
@@ -48,8 +51,16 @@ public class TodoFragment extends AbstractTabFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(LAYOUT, container, false);
-
+        swipeContainer = (SwipeRefreshLayout) view.findViewById(R.id.swipeContainer);
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
+
+
+
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setItemViewCacheSize(20);
+        recyclerView.setDrawingCacheEnabled(true);
+        recyclerView.setDrawingCacheQuality(View.DRAWING_CACHE_QUALITY_HIGH);
+
         data_list  = new ArrayList<>();
         load_data_from_server(0);
 
